@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddFragment">
+    <TextView
+        android:id="@+id/txt_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adib qo`shish"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="30dp"/>
+    <ImageView
+        android:id="@+id/adib_img"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="100dp"
+        android:background="#C4C4C4"
+        app:layout_constraintTop_toBottomOf="@id/txt_add"
+        android:layout_marginTop="15dp"/>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/adib_rasmi_btn"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#00B238"
+        app:layout_constraintTop_toBottomOf="@id/adib_img"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Adib rasmi"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+    </androidx.cardview.widget.CardView>
+    <EditText
+        android:id="@+id/adib_fio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_background"
+        android:hint="Adib ismi,familiyasi va otasining ismi"
+        android:paddingLeft="10dp"
+        android:paddingVertical="11dp"
+        app:layout_constraintTop_toBottomOf="@id/adib_rasmi_btn"
+        android:layout_marginHorizontal="33dp"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/adib_birthday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_background"
+        android:hint="Tug`ilgan yili"
+        android:paddingLeft="10dp"
+        android:inputType="number"
+        android:paddingVertical="11dp"
+        app:layout_constraintTop_toBottomOf="@id/adib_fio"
+        android:layout_marginHorizontal="33dp"
+        android:layout_marginTop="15dp"/>
+    <EditText
+        android:id="@+id/adib_vafot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_background"
+        android:hint="Vafot etgam yili"
+        android:paddingLeft="10dp"
+        android:inputType="number"
+        android:paddingVertical="11dp"
+        app:layout_constraintTop_toBottomOf="@id/adib_birthday"
+        android:layout_marginHorizontal="33dp"
+        android:layout_marginTop="15dp"/>
+    <Spinner
+        android:id="@+id/spin_tur"
+        android:background="@drawable/edit_background"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.06"
+        android:layout_marginHorizontal="33dp"
+        android:layout_marginTop="15dp"
+        android:entries="@array/Turi"
+        app:layout_constraintTop_toBottomOf="@id/adib_vafot"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <com.google.android.material.textfield.TextInputLayout
+        app:layout_constraintTop_toBottomOf="@id/spin_tur"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="33dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/about_adib"
+            android:hint="Adib haqida to'liq ma`lumot" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+         app:cardCornerRadius="10dp"
+        android:backgroundTint="#00B238"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="11dp"
+        android:layout_marginRight="33dp">
+        <TextView
+            android:id="@+id/save_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sqalash"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_gravity="center"/>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
